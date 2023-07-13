@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/signin.css" />
+    <title>Login</title>
+  </head>
+  <body>
+    <img src="../img/Logo-ENTA.png" alt="Minha Imagem" class="logo-enta">
+    <div class="container">
+        <div class="card">
+          <h1>Entrar</h1>
+      
+          <div id="msgError"></div>
+      
+          <form id="loginForm" action="processar_login.php" method="POST">
+            <div class="label-float">
+              <input type="text" id="utilizador" name="utilizador" placeholder="" required />
+              <label id="userLabel" for="utilizador">Utilizador</label>
+            </div>
+      
+            <div class="label-float">
+              <input type="password" id="senha" name="senha" placeholder="" required />
+              <label id="senhaLabel" for="senha">Senha</label>
+              <i class="fa fa-eye" aria-hidden="true"></i>
+            </div>
+      
+            <div class="justify-center">
+              <button type="submit">Entrar</button>
+            </div>
+
+            <div class="justify-center">
+                <hr />
+              </div>
+      
+              <p>
+                Não tem uma conta?
+                <a href="./signup.html">
+                  Registe-se
+                </a>
+              </p>
+            </div>
+            
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/signin.js"></script>
+
+    <div class="footer">
+        <p>Diogo Pacheco</p>
+        <p>© 2023 - ENTA - Açores</p>
+    </div>
+
+  </body>
+</html>

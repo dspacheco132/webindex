@@ -229,3 +229,71 @@ input:hover{
     bottom: 0;
     left: 300px
 }
+
+.login-box #eye:hover {
+    color: #000000;
+}
+
+.login-box input[type="submit"]{
+    border: none;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 18px;
+    background: #deae00;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    transition: .3s ease;
+}
+
+.login-box input[type="submit"]:hover{
+    background: #000000;
+    color: #fff;
+}
+
+.login-box a{
+    text-decoration: none;
+    font-size: 14px;
+    color: #fff;
+    margin-left: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.login-box a:hover{
+    color: #000000;
+}
+
+.login-box #eye {
+    position: absolute;
+    top: 89.9%;
+    transform: translateY(-50%);
+    right: 5px;
+    color: #d6d6d6; /* Altere a cor do ícone para cinza claro */
+    cursor: pointer; /* Adicione um cursor de apontar para indicar interatividade */
+    line-height: 35px;
+    bottom: 0;
+    left: 300px
+}
+
+.login-box #eye:hover {
+    color: #000000;
+}
+
+.login-box #eye2 {
+    position: absolute;
+    top: 89.9%;
+    transform: translateY(-50%);
+    right: 5px;
+    color: #d6d6d6; /* Altere a cor do ícone para cinza claro */
+    cursor: pointer; /* Adicione um cursor de apontar para indicar interatividade */
+    line-height: 35px;
+    bottom: 0;
+    left: 300px
+}
+
+.login-box #eye2:hover {
+    color: #000000;
+}
+
