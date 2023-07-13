@@ -1,6 +1,10 @@
 <?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Obtém os dados do formulário
+    $utilizador = $_POST["utilizador"];
+    $senha = $_POST["senha"];
 
-$servername = "xpto";
+$servername = "db";
 $username   = "xpto";
 $password   = "xpto";
 $dbname     = "xpto";
@@ -13,16 +17,21 @@ if (!$conn) {
 
 $user = mysqli_real_escape_string($conn, $_REQUEST['user']);
 $pass = mysqli_real_escape_string($conn, $_REQUEST['pass']);
-$sql1 = "SELECT * FROM data WHERE user='$user' AND pass='$pass'";
-$result = $conn->query($sql1);
+$sql = "SELECT * FROM usuarios WHERE utilizador = '$utilizador' AND senha = '$senha'";
+$result = $conn->query($sql);
 
-// Verifica se a consulta retornou algum resultado
-if ($result->num_rows > 0) {
-    header("location: sucesso_login.php");
-    exit;
-} else {
+    /// Verifica se a consulta retornou algum resultado
+    if ($result->num_rows > 0) {
+        // Usuário e senha estão corretos, redireciona para a página de sucesso
+        header("Location: index.html");
+        exit;
+    } else {
+        // Usuário e/ou senha estão incorretos, exibe uma mensagem de erro
+        echo "Usuário e/ou senha incorretos.";
+    }
+
+    mysqli_close($conn);
 }
-mysqli_close($conn);
 ?>
 
 <!DOCTYPE html>
@@ -36,6 +45,6 @@ mysqli_close($conn);
 </head>
 <body>
     <h1>Não foi possivel dar login<h/1>
-    <a href="http://localhost:80/login.php" target="_blank" class="btn btn-main1">Tentar Novamente</a>
+    <a href="http://localhost:80/signin.html" target="_blank" class="btn btn-main1">Tentar Novamente</a>
 </body>
 </html>
